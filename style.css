@@ -347,7 +347,7 @@ p:hover {
 nav {
     position: sticky;
     top: 0;
-    background-color: #FAEDCD;  /* Background color that matches your design */
+    background-color: #333;  /* Background color that matches your design */
     padding: 1rem 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -356,7 +356,7 @@ nav {
 
 /* Hover effect on the Nav bar background */
 nav:hover {
-    background-color: #F8D7B9; /* Slightly darker shade on hover */
+    background-color: #333; /* Slightly darker shade on hover */
 }
 
 /* Styling for the <ul> */
