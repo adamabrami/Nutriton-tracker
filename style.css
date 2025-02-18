@@ -482,7 +482,15 @@ div {
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    transition: top 0.3s; /* Smooth transition */
+    z-index: 1000;
 
+}
 div:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
