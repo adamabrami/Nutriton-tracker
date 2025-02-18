@@ -1,0 +1,489 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FAEDCD;  /* Soft background color */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FF6347;  /* Tomato color on hover */
+    transform: scale(1.1);
+}
+
+/* Home Page */
+header {
+    text-align: center;
+    padding: 3rem;
+    background-color: #333;
+    color: white;
+    border-bottom: 5px solid #FF6347;
+    animation: fadeIn 1s ease-out;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+header p {
+    font-size: 1.2rem;
+    animation: fadeInUp 1.2s ease-out;
+}
+
+/* Calculator Section */
+.calculator-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 3rem;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.calculator-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 22%;
+    margin: 20px;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.calculator-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-card i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #FF6347;
+}
+
+.calculator-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.calculator-card a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.6rem 1.2rem;
+    background-color: #FF6347;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.calculator-card a:hover {
+    background-color: #FF4500;  /* Darker tomato color */
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 3rem;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border-color: #FF6347;
+}
+
+.contact-section button {
+    padding: 1rem;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+    background-color: #FF4500;
+}
+
+
+
+/* Buttons & Forms for Other Pages */
+button {
+    padding: 1rem;
+    background-color: #FF6347;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .calculator-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .calculator-card {
+        width: 80%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+}
+/* Label Styling */
+label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    display: block;
+    text-align: left;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #FF6347;  
+}
+
+
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #FF6347;
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Tomato shadow on focus */
+}
+
+/* Styling for <option> Elements */
+select {
+    background-color: #fff;
+    color: #333;
+    font-size: 1rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Option Hover and Focus Effects */
+select:hover {
+    background-color: #FF6347;
+    color: white;
+}
+
+select:focus {
+    background-color: #FF6347;
+    color: white;
+}
+
+/* Custom Scrollbars for <select> (optional) */
+select::-webkit-scrollbar {
+    width: 8px;
+}
+
+select::-webkit-scrollbar-thumb {
+    background-color: #FF6347;
+    border-radius: 4px;
+}
+
+select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Placeholder Styling for Inputs */
+input[type="number"]::placeholder,
+textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+/* Styling for <div> containers (general) */
+div {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div:hover {
+    transform: translateY(-5px); /* Hover effect for div */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for <h2> */
+h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    animation: fadeInUp 1s ease-out;  /* Add animation for fade-in effect */
+}
+
+h2:hover {
+    color: #FF6347;  /* Tomato color on hover */
+}
+
+/* Styling for <p> (general text) */
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    animation: fadeInUp 1.2s ease-out;  /* Add animation for text fade-in */
+}
+
+p:hover {
+    color: #333; /* Darken text on hover */
+}
+
+/* Additional Animation Keyframes */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Basic Navigation Bar Styling */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #FAEDCD;  /* Background color that matches your design */
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect on the Nav bar background */
+nav:hover {
+    background-color: #F8D7B9; /* Slightly darker shade on hover */
+}
+
+/* Styling for the <ul> */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* Styling for each <li> */
+ul li {
+    padding: 0.5rem 1rem;
+}
+
+/* Styling for each <a> link */
+ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;  /* Dark color for the text */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effects for the links */
+ul li a:hover {
+    color: #fff;
+    background-color: #FF6347;  /* Accent color for the hover state */
+    transform: translateY(-3px);  /* Slight lift effect */
+}
+
+/* Active link effect */
+ul li a:active {
+    transform: translateY(1px);  /* Slight press effect when clicked */
+}
+/* Styling for the result div */
+#result {
+    font-size: 2rem;  /* Larger font size */
+    font-weight: 700;  /* Bolder text */
+    color: #333;  /* Dark color for the text */
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #FAEDCD;  /* Match your website background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);  /* Set initial scale */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+
+#result span {
+    font-size: 2.5rem;  
+    color: #FF6347; 
+    font-weight: 800; 
+}
+
+
+#result:hover {
+    transform: scale(1.05);  
+    color: #FF6347;  
+}
+
+
+#result {
+    animation: fadeInUp 1s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* Styling for the footer */
+footer {
+    background-color: #333;  /* Dark background for footer */
+    color: #fff;  /* White text color */
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer text */
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Add a subtle hover effect for the name link (if you decide to link it) */
+footer a {
+    color: #FF6347;  /* Accent color */
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FF4500;  /* Darker accent color on hover */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9999;  /* Ensures it stays above other content */
+}
+div {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
