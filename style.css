@@ -472,7 +472,7 @@ footer {
     bottom: 0;
     width: 100%;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 9999;  /* Ensures it stays above other content */
+    z-index: 9999; 
 }
 div {
     margin-bottom: 2rem;
@@ -487,12 +487,29 @@ div {
     top: 0;
     width: 100%;
     background-color: #333;
-    transition: top 0.3s; /* Smooth transition */
+    transition: top 0.3s; 
     z-index: 1000;
 
 }
 div:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 12px;
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
