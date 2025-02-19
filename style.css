@@ -495,3 +495,32 @@ div:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+div#results.results {
+    font-size: 2rem;  /* Larger font size */
+    font-weight: 700;  /* Bolder text */
+    color: #333;  /* Dark color for the text */
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #FAEDCD;  /* Match your website background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);  /* Set initial scale */
+    transition: transform 0.3s ease, color 0.3s ease;
+
+} 
+
+div#results.results-section {
+    font-size: 2rem;  /* Larger font size */
+    font-weight: 700;  /* Bolder text */
+    color: #333;  /* Dark color for the text */
+    margin-top: 2rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #FAEDCD;  /* Match your website background color */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);  /* Set initial scale */
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeInUp 1s ease-out;
+}
